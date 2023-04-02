@@ -7,7 +7,9 @@ const modelStructure = new Schema({
     icon:{type:String, required:true},
     country:{type:String, required:true},
     city:{type:String, required:true},
-    temperature:{type:String, required:true}
+    temperature:{type:String, required:true},
+    humidity:{type:String, required:true},
+    localTime:{type:String, required:true}
 })
 
 module.exports = mongoose.model('Model', modelStructure)

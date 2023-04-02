@@ -1,8 +1,84 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+@media only screen and (max-width: 768px){
 
-a {
-  color: #00B7FF;
+*{
+  margin: 0;
+  padding: 0;
+}
+  #navApp{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background: lightgray;
+  }
+
+
+  #iconWeather{
+    width: 100px;
+  }
+
+  #appInformation{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #cardWeather{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+
+  .headCard{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 6px;
+  }
+
+
+  .titleCard{
+    font-size: 30px;
+  }
+
+  .headCard i{
+    font-size: 30px;
+    margin-left: 10px;
+  }
+
+  #containerIcon{
+    width: 100%;
+    height: 100px;
+  }
+
+  #iconCard{
+    position: relative;
+    top: -40px;
+    left: 50px;
+    width: 180px;
+  }
+
+  #dataCard{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  #dateCard{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
