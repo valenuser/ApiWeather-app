@@ -20,7 +20,6 @@ newCity.addEventListener('click',()=>{
 //button add new city in the app
 
 addCityButton.addEventListener('click',()=>{
-    axios.get('/api/'+NameNewCity.value)
-        .then(response => console.log(response))
-        .catch(error => console.log(error))
+    const data = getAPI(NameNewCity.value)
+    NameNewCity.value = ''
 })

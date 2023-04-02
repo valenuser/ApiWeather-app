@@ -3,7 +3,6 @@ const mongoose = require('mongoose')
 const {Schema} = mongoose
 
 const modelStructure = new Schema({
-    id:{type:String, required:true},
     icon:{type:String, required:true},
     country:{type:String, required:true},
     city:{type:String, required:true},
