@@ -9,6 +9,7 @@
     width: 100%;
     height: 100px;
     background: lightgray;
+    margin-bottom: 200px;
   }
 
 
@@ -80,5 +81,24 @@
     width: 100%;
     display: flex;
     justify-content: center;
+  }
+
+
+  #addCity-Form{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #addCity-Form input{
+    width: 80%  ;
+  }
+
+  #addCity-Form button{
+    margin-top: 20px;
   }
 }

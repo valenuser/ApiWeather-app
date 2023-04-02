@@ -1,10 +1,5 @@
-const env = require('dotenv')
 
-const addData = async(data)=>{
-    const dataID = await data
 
-    console.log(dataID);
-}
 
 
 const getAPI = (city) =>{
@@ -12,4 +7,6 @@ const getAPI = (city) =>{
     fetch(URL)
         .then(response =>  addData(response.json()))
         .catch(error => console.log(error))
-}       
+}    
+
+

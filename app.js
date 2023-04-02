@@ -8,7 +8,6 @@ var logger = require('morgan');
 
 var app = express();
 var server = require('http').Server(app)
-
 var {mongoose} = require('./database')
 
 // view engine setup
