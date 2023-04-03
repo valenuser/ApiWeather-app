@@ -9,11 +9,18 @@ Router.get('/',async(req,res)=>{
 })
 
 
-Router.post('/',(req,res)=>{
+Router.post('/',async(req,res)=>{
     const {icon,country,city,temperature,humidity,localTime} = req.body;
     const data = new ModelAPI({icon,country,city,temperature,humidity,localTime})
-    data.save()
+    await data.save()
     res.json({status:'received'})
+})
+
+Router.put('/:id',async(req,res)=>{
+    const {icon,country,city,temperature,humidity,localTime} = req.body;
+    const updateData = ({icon,country,city,temperature,humidity,localTime})
+    await ModelAPI.findByIdAndUpdate(req.params.id, updateData)
+    res.json({status:'task updated'})
 })
 
 

@@ -5,6 +5,8 @@ const sectionMain = document.getElementById('Main-APP')
 const sectionNewCityForm = document.getElementById('addCity-Form')
 const addCityButton = document.getElementById('addCityButton')
 const NameNewCity = document.getElementById('NameNewCity')
+const ButtonRefresh = document.getElementById('ButtonRefresh')
+
 
 BackMainButton.addEventListener('click',()=>{
     sectionMain.style.display = 'flex'
@@ -22,4 +24,10 @@ newCity.addEventListener('click',()=>{
 addCityButton.addEventListener('click',()=>{
     getAPI(NameNewCity.value)
     NameNewCity.value = ''
+})
+
+//button refresh all data
+
+ButtonRefresh.addEventListener('click',() =>{
+    updateData()
 })
