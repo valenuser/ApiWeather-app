@@ -104,4 +104,10 @@
     margin-left: 70px;
     margin-top: 200px;
   }
+
+  #deleteCard{
+    position: relative;
+    left: 300px;
+    font-size: 35px;
+  }
 }

@@ -20,6 +20,6 @@ newCity.addEventListener('click',()=>{
 //button add new city in the app
 
 addCityButton.addEventListener('click',()=>{
-    const data = getAPI(NameNewCity.value)
+    getAPI(NameNewCity.value)
     NameNewCity.value = ''
 })

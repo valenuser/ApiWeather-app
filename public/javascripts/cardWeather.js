@@ -5,6 +5,7 @@ const cardStructure = (data) =>{
     const div = document.createElement('div')
     div.innerHTML = `
     <div class="cardWeather">
+        <i class="fa-solid fa-xmark" data-id=${data._id} id="deleteCard"></i>
         <div class="headCard">
             <p class="titleCard">${data.city}</p><i class="fa-solid fa-location-dot"></i>
         </div>
@@ -20,6 +21,17 @@ const cardStructure = (data) =>{
             <p>Date:${data.localTime}</p>
         </div>
     </div> `
+
+    const deleteCard = div.querySelector('#deleteCard')
+
+    deleteCard.addEventListener('click',()=>{
+        axios.delete('/api/'+deleteCard.dataset.id)
+            .then(response => console.log(response))
+            .catch(error => console.log(error))
+
+        appInformation.innerHTML = ''
+        reloadData()
+    })
 
     return div
 }

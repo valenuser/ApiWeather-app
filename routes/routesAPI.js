@@ -1,6 +1,6 @@
 const express = require('express')
 const Router = express.Router()
-const {uuid:uuidv4} = require('uuid')
+
 const ModelAPI = require('../models/modelDB')
 
 Router.get('/',async(req,res)=>{
@@ -19,7 +19,6 @@ Router.post('/',(req,res)=>{
 
 Router.delete('/:id',async(req,res)=>{
     await ModelAPI.findByIdAndRemove(req.params.id)
-    
     res.json({status:'City removed'})
 })
 
