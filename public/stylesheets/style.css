@@ -107,7 +107,7 @@
 
   #deleteCard{
     position: relative;
-    left: 300px;
+    left: 10px;
     font-size: 35px;
   }
 }
